@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Horizonte Viagens</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!--NAVBAR-->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="bi bi-airplane-fill me-2"></i>Horizonte Viagens
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-2">
+          <li class="nav-item"><a class="nav-link" href="#destinos">Destinos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pacotes">Pacotes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#comparativo">Comparativo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--HERO-->
+  <section class="hero d-flex align-items-center" id="inicio">
+    <div class="hero-bg" style="background-image: url('img/banner/pexels-thetubaguy-11020865.jpg');"></div>
+    <div class="hero-overlay"></div>
+    <div class="container position-relative text-white text-center">
+      <p class="hero-sub mb-2">Sua próxima aventura começa aqui</p>
+      <h1 class="hero-title mb-4">Explore o Mundo<br/>Sem Limites</h1>
+      <a href="#destinos" class="btn btn-hero">Ver Destinos <i class="bi bi-arrow-down ms-1"></i></a>
+    </div>
+  </section>
+
+  <!--DESTINOS-->
+  <section class="py-5" id="destinos">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <span class="section-tag">Onde ir</span>
+        <h2 class="section-title">Destinos em Destaque</h2>
+      </div>
+
+      <div class="d-flex justify-content-center gap-2 mb-4 flex-wrap">
+        <button class="btn btn-filter active" data-filter="todos">Todos</button>
+        <button class="btn btn-filter" data-filter="nacional">🇧🇷 Nacional</button>
+        <button class="btn btn-filter" data-filter="internacional">🌍 Internacional</button>
+      </div>
+
+      <div class="row g-4" id="cards-destinos">
+
+        <div class="col-12 col-sm-6 col-lg-4 card-item" data-categoria="nacional">
+          <div class="dest-card">
+            <div class="dest-img" style="background-image: url('img/nacional/ze-paulo-galveias-h-UU2PnN5a0-unsplash.jpg');"></div>
+            <div class="dest-info">
+              <span class="dest-badge nacional">Nacional</span>
+              <h5 class="dest-name">Fernando de Noronha</h5>
+              <p class="dest-desc">Arquipélago paradisíaco com praias cristalinas e vida marinha única.</p>
+              <div class="dest-footer">
+                <span class="dest-price">A partir de R$ 3.200</span>
+                <a href="#contato" class="btn btn-sm btn-dest">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 card-item" data-categoria="nacional">
+          <div class="dest-card">
+            <div class="dest-img" style="background-image: url('img/nacional/matheus-seiji-goto-djxeSyUR0j8-unsplash.jpg');"></div>
+            <div class="dest-info">
+              <span class="dest-badge nacional">Nacional</span>
+              <h5 class="dest-name">Chapada Diamantina</h5>
+              <p class="dest-desc">Cachoeiras, grutas e trilhas inesquecíveis no coração da Bahia.</p>
+              <div class="dest-footer">
+                <span class="dest-price">A partir de R$ 1.800</span>
+                <a href="#contato" class="btn btn-sm btn-dest">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 card-item" data-categoria="nacional">
+          <div class="dest-card">
+            <div class="dest-img" style="background-image: url('img/nacional/pexels-jonathanborba-18171958.jpg');"></div>
+            <div class="dest-info">
+              <span class="dest-badge nacional">Nacional</span>
+              <h5 class="dest-name">Gramado, RS</h5>
+              <p class="dest-desc">Charme europeu, chocolate artesanal e paisagens de tirar o fôlego.</p>
+              <div class="dest-footer">
+                <span class="dest-price">A partir de R$ 2.100</span>
+                <a href="#contato" class="btn btn-sm btn-dest">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 card-item" data-categoria="internacional">
+          <div class="dest-card">
+            <div class="dest-img" style="background-image: url('img/internacional/anthony-delanoix-QAwciFlS1g4-unsplash.jpg');"></div>
+            <div class="dest-info">
+              <span class="dest-badge internacional">Internacional</span>
+              <h5 class="dest-name">Paris, França</h5>
+              <p class="dest-desc">A cidade da luz com sua gastronomia, arte e romance inconfundíveis.</p>
+              <div class="dest-footer">
+                <span class="dest-price">A partir de R$ 8.500</span>
+                <a href="#contato" class="btn btn-sm btn-dest">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 card-item" data-categoria="internacional">
+          <div class="dest-card">
+            <div class="dest-img" style="background-image: url('img/internacional/takashi-miyazaki-64ajtpEzlYc-unsplash.jpg');"></div>
+            <div class="dest-info">
+              <span class="dest-badge internacional">Internacional</span>
+              <h5 class="dest-name">Tóquio, Japão</h5>
+              <p class="dest-desc">Tecnologia, cultura milenar e culinária em uma das cidades mais fascinantes.</p>
+              <div class="dest-footer">
+                <span class="dest-price">A partir de R$ 11.000</span>
+                <a href="#contato" class="btn btn-sm btn-dest">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 card-item" data-categoria="internacional">
+          <div class="dest-card">
+            <div class="dest-img" style="background-image: url('img/internacional/james-ting-VIhBOwitqu8-unsplash.jpg');"></div>
+            <div class="dest-info">
+              <span class="dest-badge internacional">Internacional</span>
+              <h5 class="dest-name">Nova York, EUA</h5>
+              <p class="dest-desc">A cidade que nunca dorme: Broadway, Central Park e muito mais.</p>
+              <div class="dest-footer">
+                <span class="dest-price">A partir de R$ 7.200</span>
+                <a href="#contato" class="btn btn-sm btn-dest">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--PACOTES-->
+  <section class="py-5 bg-section" id="pacotes">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <span class="section-tag">Ofertas</span>
+        <h2 class="section-title">Nossos Pacotes</h2>
+      </div>
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-12 col-md-4">
+          <div class="pkg-card text-center p-4">
+            <div class="pkg-icon mb-3"><i class="bi bi-sun-fill"></i></div>
+            <h5 class="pkg-name">Pacote Praia</h5>
+            <p>7 dias em destinos litorâneos nacionais com hospedagem e café da manhã.</p>
+            <p class="pkg-price">R$ 2.990 <span>/pessoa</span></p>
+            <a href="#contato" class="btn btn-pkg">Contratar</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="pkg-card pkg-featured text-center p-4">
+            <span class="pkg-popular">Mais Vendido</span>
+            <div class="pkg-icon mb-3"><i class="bi bi-globe-americas"></i></div>
+            <h5 class="pkg-name">Pacote Europa</h5>
+            <p>15 dias visitando 4 países com passagem, hotel e roteiro guiado.</p>
+            <p class="pkg-price">R$ 14.500 <span>/pessoa</span></p>
+            <a href="#contato" class="btn btn-pkg-featured">Contratar</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="pkg-card text-center p-4">
+            <div class="pkg-icon mb-3"><i class="bi bi-tree-fill"></i></div>
+            <h5 class="pkg-name">Pacote Aventura</h5>
+            <p>10 dias em ecoturismo com trilhas, cachoeiras e imersão na natureza.</p>
+            <p class="pkg-price">R$ 4.200 <span>/pessoa</span></p>
+            <a href="#contato" class="btn btn-pkg">Contratar</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--COMPARATIVO (TABELA)-->
+  <section class="py-5" id="comparativo">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <span class="section-tag">Compare</span>
+        <h2 class="section-title">Comparativo de Pacotes</h2>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover text-center align-middle">
+          <thead class="table-primary">
+            <tr>
+              <th>Item</th>
+              <th>🏖️ Pacote Praia</th>
+              <th>🌍 Pacote Europa</th>
+              <th>🌿 Pacote Aventura</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Duração</strong></td>
+              <td>7 dias</td>
+              <td>15 dias</td>
+              <td>10 dias</td>
+            </tr>
+            <tr>
+              <td><strong>Destino</strong></td>
+              <td>Nacional</td>
+              <td>Internacional</td>
+              <td>Nacional</td>
+            </tr>
+            <tr>
+              <td><strong>Passagem aérea</strong></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-x-circle-fill text-danger"></i></td>
+            </tr>
+            <tr>
+              <td><strong>Hospedagem</strong></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+            </tr>
+            <tr>
+              <td><strong>Café da manhã</strong></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+            </tr>
+            <tr>
+              <td><strong>Guia turístico</strong></td>
+              <td><i class="bi bi-x-circle-fill text-danger"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+            </tr>
+            <tr>
+              <td><strong>Seguro viagem</strong></td>
+              <td><i class="bi bi-x-circle-fill text-danger"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+            </tr>
+            <tr class="table-warning fw-bold">
+              <td><strong>Preço por pessoa</strong></td>
+              <td>R$ 2.990</td>
+              <td>R$ 14.500</td>
+              <td>R$ 4.200</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!--VIDEO-->
+  <section class="py-5 bg-section" id="video">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <span class="section-tag">Inspire-se</span>
+        <h2 class="section-title">O Mundo Te Espera</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+          <div class="ratio ratio-16x9 rounded-3 overflow-hidden shadow">
+            <iframe
+              src="https://www.youtube.com/embed/F02_MVdAqCk"
+              title="Vídeo de viagens"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--SOBRE-->
+  <section class="py-5" id="sobre">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-12 col-lg-6">
+          <span class="section-tag">Quem somos</span>
+          <h2 class="section-title mt-2 mb-4">Tornando Sonhos em Destinos Reais</h2>
+          <p class="lead-text">Há mais de 10 anos conectamos viajantes brasileiros às melhores experiências do Brasil e do mundo. Nossa equipe é apaixonada por viagens e comprometida em oferecer roteiros únicos e inesquecíveis.</p>
+          <div class="row g-3 mt-3">
+            <div class="col-6">
+              <div class="stat-box text-center p-3">
+                <h3 class="stat-num">+5.000</h3>
+                <p class="stat-label">Viajantes felizes</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-box text-center p-3">
+                <h3 class="stat-num">+80</h3>
+                <p class="stat-label">Destinos disponíveis</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-box text-center p-3">
+                <h3 class="stat-num">10+</h3>
+                <p class="stat-label">Anos de experiência</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-box text-center p-3">
+                <h3 class="stat-num">4.9 ★</h3>
+                <p class="stat-label">Avaliação média</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="sobre-img-wrap">
+            <div class="sobre-img" style="background-image: url('img/banner/omar-lopez-JEKprmVt86E-unsplash.jpg');"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--CONTATO-->
+  <section class="py-5 bg-section" id="contato">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <span class="section-tag">Fale conosco</span>
+        <h2 class="section-title">Planeje sua Viagem</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-7">
+          <div class="contact-card p-4 p-md-5">
+            <div class="mb-3">
+              <label class="form-label">Nome completo</label>
+              <input type="text" class="form-control form-custom" placeholder="Seu nome" required />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">E-mail</label>
+              <input type="email" class="form-control form-custom" placeholder="seu@email.com" required />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Destino de interesse</label>
+              <select class="form-select form-custom" required>
+                <option value="">Selecione um destino...</option>
+                <option>Fernando de Noronha</option>
+                <option>Chapada Diamantina</option>
+                <option>Gramado, RS</option>
+                <option>Paris, França</option>
+                <option>Tóquio, Japão</option>
+                <option>Nova York, EUA</option>
+                <option>Outro</option>
+              </select>
+            </div>
+            <div class="mb-4">
+              <label class="form-label">Mensagem</label>
+              <textarea class="form-control form-custom" rows="4" placeholder="Conte-nos sobre sua viagem dos sonhos..." required></textarea>
+            </div>
+            <button class="btn btn-contact w-100">Enviar Mensagem <i class="bi bi-send ms-2"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--FOOTER-->
+  <footer class="footer py-4">
+    <div class="container text-center">
+      <p class="mb-1"><i class="bi bi-airplane-fill me-2"></i><strong>Horizonte Viagens</strong></p>
+      <p class="footer-sub mb-0">© 2025 Horizonte Viagens. Projeto acadêmico — UVV.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
