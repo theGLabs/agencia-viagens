@@ -1,4 +1,3 @@
-
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 60);
@@ -39,12 +38,12 @@ const fadeEls = document.querySelectorAll(
   '.dest-card, .pkg-card, .stat-box, .section-title, .contact-card'
 );
 
-fadeEls.forEach(el => el.classList.add('fade-in'));
+fadeEls.forEach(el => el.classList.add('anim-fade'));
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+      entry.target.classList.add('anim-visible');
       observer.unobserve(entry.target);
     }
   });
