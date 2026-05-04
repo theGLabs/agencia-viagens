@@ -346,16 +346,18 @@
         <div class="col-12 col-lg-7">
           <div class="contact-card p-4 p-md-5">
             <div class="mb-3">
-              <label class="form-label">Nome completo</label>
-              <input type="text" class="form-control form-custom" placeholder="Seu nome" required />
+              <label class="form-label" for="inputNome">Nome completo</label>
+              <input type="text" id="inputNome" class="form-control form-custom" placeholder="Seu nome" required />
+              <div class="invalid-feedback">Por favor, informe seu nome.</div>
             </div>
             <div class="mb-3">
-              <label class="form-label">E-mail</label>
-              <input type="email" class="form-control form-custom" placeholder="seu@email.com" required />
+              <label class="form-label" for="inputEmail">E-mail</label>
+              <input type="email" id="inputEmail" class="form-control form-custom" placeholder="seu@email.com" required />
+              <div class="invalid-feedback">Informe um e-mail válido (ex: nome@email.com).</div>
             </div>
             <div class="mb-3">
-              <label class="form-label">Destino de interesse</label>
-              <select class="form-select form-custom" required>
+              <label class="form-label" for="inputDestino">Destino de interesse</label>
+              <select id="inputDestino" class="form-select form-custom" required>
                 <option value="">Selecione um destino...</option>
                 <option>Fernando de Noronha</option>
                 <option>Chapada Diamantina</option>
@@ -365,12 +367,14 @@
                 <option>Nova York, EUA</option>
                 <option>Outro</option>
               </select>
+              <div class="invalid-feedback">Selecione um destino de interesse.</div>
             </div>
             <div class="mb-4">
-              <label class="form-label">Mensagem</label>
-              <textarea class="form-control form-custom" rows="4" placeholder="Conte-nos sobre sua viagem dos sonhos..." required></textarea>
+              <label class="form-label" for="inputMensagem">Mensagem</label>
+              <textarea id="inputMensagem" class="form-control form-custom" rows="4" placeholder="Conte-nos sobre sua viagem dos sonhos..." required></textarea>
+              <div class="invalid-feedback">Escreva uma mensagem antes de enviar.</div>
             </div>
-            <button class="btn btn-contact w-100">Enviar Mensagem <i class="bi bi-send ms-2"></i></button>
+            <button class="btn btn-contact w-100" id="btnEnviar">Enviar Mensagem <i class="bi bi-send ms-2"></i></button>
           </div>
         </div>
       </div>
