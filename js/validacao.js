@@ -42,7 +42,15 @@ if (btnEnviar) {
 
     const tudo_ok = [nome, email, destino, mensagem].every(validarCampo);
 
-    if (!tudo_ok) return;
+    if (!tudo_ok) {
+      btnEnviar.innerHTML = '✕ Preencha todos os campos!';
+      btnEnviar.style.background = '#dc3545';
+      setTimeout(() => {
+        btnEnviar.innerHTML = 'Enviar Mensagem <i class="bi bi-send ms-2"></i>';
+        btnEnviar.style.background = '';
+      }, 2500);
+      return;
+    }
 
     btnEnviar.innerHTML = '✓ Mensagem enviada!';
     btnEnviar.style.background = '#1a6b3a';
